@@ -134,3 +134,33 @@ print(negMatrix)
 * `tf.floordiv(x, y)` - rounds down final answer
 * `tf.mod(x, y)`
 
+### Writing code in Jupyter
+
+Jupyter is a web application that displays computation so that you can share annotated interactive algorithms with others to teach a technique or demonstrate code.
+
+(Start a Jupyter web app running the command at the top)
+
+Everything in the Jupyter Notebook is an independent chunk of code or text called **cell**. Cells help divide a long block of code into manageable pieces of code snippets and documentation.
+
+### Using variables
+
+You can use the `Variable` class to represent a node whose value changes over time.
+
+```python
+import tensorflow as tf
+sess = tf.InteractiveSession()
+
+raw_data = [1., 2., 8., -1., 0., 5.5, 6., 13]
+spike = tf.Variable(False)
+spike.initializer.run()
+
+for i in range(1, len(raw_data)):
+    if raw_data[i] - raw_data[i - 1] > 5:
+        updater = tf.assign(spike, True)
+        updater.eval()
+    else:
+        tf.assign(spike, False).eval()
+    print("Spike", spike.eval())
+
+sess.close()
+```
