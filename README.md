@@ -110,3 +110,27 @@ tf.ones([500, 500]) * 0.5
 ```
 
 ### Creating operators
+
+```python
+import tensorflow as tf
+
+x = tf.constant([[1, 2]])
+negMatrix = tf.negative(x)
+print(negMatrix)
+
+# tf.Tensor([[-1 -2]], shape=(1, 2), dtype=int32)
+```
+
+#### useful Tensorflow operators
+
+* `tf.add(x, y)`
+* `tf.subtract(x, y)`
+* `tf.multiply(x, y)`
+* `tf.pow(x, y)`
+* `tf.exp(x)`
+* `tf.sqrt(x)`
+* `tf.div(x, y)`
+* `tf.truediv(x, y)` - casts arguments as float
+* `tf.floordiv(x, y)` - rounds down final answer
+* `tf.mod(x, y)`
+
