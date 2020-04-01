@@ -1,0 +1,17 @@
+{
+  "name": "HandwrittenDigit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start:dev": "NODE_ENV=development webpack",
+    "run:dev": "NODE_ENV=development nodemon build/index.js"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.0.4",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
