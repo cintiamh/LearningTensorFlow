@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 
 const {
@@ -14,9 +15,10 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
-        compress: true,
     },
+    devtool: 'inline-source-map',
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({template: './src/index.html'})
     ],
     watch: NODE_ENV === 'development'

@@ -6,12 +6,17 @@
   "scripts": {
     "build": "webpack",
     "start:dev": "NODE_ENV=development webpack",
+    "start": "webpack-dev-server --open",
     "run:dev": "NODE_ENV=development nodemon build/index.js"
   },
   "devDependencies": {
+    "@tensorflow/tfjs": "^1.7.1",
+    "@tensorflow/tfjs-vis": "^1.4.0",
+    "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.0.4",
     "nodemon": "^2.0.2",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
